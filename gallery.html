@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🏎️ F1 Car Gallery</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #0d0d0d;
+      color: #fff;
+    }
+    header {
+      text-align: center;
+      padding: 30px;
+      background: #e10600;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .card {
+      background: #1a1a1a;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(255,0,0,0.5);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 25px rgba(255,0,0,0.7);
+    }
+    .card img {
+      width: 100%;
+      display: block;
+      transition: transform 0.3s;
+    }
+    .card:hover img {
+      transform: scale(1.05);
+    }
+    .info {
+      padding: 15px;
+    }
+    .info h3 {
+      margin: 5px 0;
+      color: #ff0000;
+      font-size: 1.4rem;
+    }
+    .info p {
+      margin: 4px 0;
+      color: #ccc;
+      font-size: 0.95rem;
+    }
+    .specs {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      background: #111;
+      padding: 8px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      color: #fff;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #111;
+      margin-top: 20px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🏎️ F1 Car Gallery</h1>
+  </header>
+
+  <section class="gallery">
+    <div class="card">
+      <img src="download (3).webp"
+      <div class="info">
+        <h3>Alpine AP24</h3>
+        <p>Team: Alpine</p>
+        <div class="specs">
+          <span>Top Speed: 350 km/h</span>
+          <span>Power: 1070 hp</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="download (1).webp"
+      <div class="info">
+        <h3>Ferrari SF24</h3>
+        <p>Team: Ferrari</p>
+        <div class="specs">
+          <span>Top Speed: 355 km/h</span>
+          <span>Power: 1075 hp</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="download (2).webp"
+        <p>Team: Mercedes</p>
+        <div class="specs">
+          <span>Top Speed: 352 km/h</span>
+          <span>Power: 1070 hp</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="OIP (1).webp"
+        <h3>Red Bull RB20</h3>
+        <p>Team: Red Bull</p>
+        <div class="specs">
+          <span>Top Speed: 360 km/h</span>
+          <span>Power: 1080 hp</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="OIP.webp"
+      <div class="info">
+        <h3>McLaren MCL38</h3>
+        <p>Team: McLaren</p>
+        <div class="specs">
+          <span>Top Speed: 348 km/h</span>
+          <span>Power: 1065 hp</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="download.webp"
+        <p>Team: Williams</p>
+        <div class="specs">
+          <span>Top Speed: 340 km/h</span>
+          <span>Power: 1050 hp</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 F1 Fan Page | Designed by Emtiaz</p>
+  </footer>
+</body>
+</html>

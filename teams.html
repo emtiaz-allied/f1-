@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pro F1 Car Gallery</title>
+  <style>
+    /* ===== General Styles ===== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #0d0d0d;
+      color: white;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ===== Header ===== */
+    header {
+      background: linear-gradient(90deg, #e10600, #ff4c4c);
+      text-align: center;
+      padding: 40px 20px;
+      animation: headerAnimation 2s ease-in-out forwards;
+    }
+
+    @keyframes headerAnimation {
+      0% { transform: translateY(-100px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    header h1 {
+      font-size: 3rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #fff;
+      text-shadow: 2px 2px 10px #000;
+    }
+
+    /* ===== Gallery ===== */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      padding: 30px 20px;
+    }
+
+    .card {
+      background: #1a1a1a;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(255,0,0,0.5);
+      transition: transform 0.4s, box-shadow 0.4s;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(30px);}
+      100% { opacity: 1; transform: translateY(0);}
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 12px 30px rgba(255,0,0,0.7);
+    }
+
+    .card img {
+      width: 100%;
+      display: block;
+      transition: transform 0.4s;
+    }
+
+    .card:hover img {
+      transform: scale(1.05);
+    }
+
+    .info {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .info h3 {
+      margin: 8px 0;
+      color: #ff0000;
+      font-size: 1.5rem;
+    }
+
+    .info p {
+      margin: 4px 0;
+      color: #ccc;
+      font-size: 1rem;
+    }
+
+    .specs {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 12px;
+      background: #111;
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      color: #fff;
+      transition: background 0.3s;
+    }
+
+    .specs span {
+      display: block;
+    }
+
+    .card:hover .specs {
+      background: #222;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #111;
+      font-size: 0.9rem;
+      margin-top: 30px;
+    }
+
+    /* ===== Responsive ===== */
+    @media(max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      .specs { flex-direction: column; gap: 5px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🏎️ F1 Pro Gallery</h1>
+  </header>
+
+  <section class="gallery">
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1618578480598-3d1a7f6f7c82?auto=format&fit=crop&w=800&q=80" alt="Alpine AP24">
+      <div class="info">
+        <h3>Alpine AP24</h3>
+        <p>Team: Alpine</p>
+        <div class="specs">
+          <span>Top Speed: 350 km/h</span>
+          <span>Power: 1070 hp</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1618578480598-3d1a7f6f7c82?auto=format&fit=crop&w=800&q=80" alt="Ferrari SF24">
+      <div class="info">
+        <h3>Ferrari SF24</h3>
+        <p>Team: Ferrari</p>
+        <div class="specs">
+          <span>Top Speed: 355 km/h</span>
+          <span>Power: 1075 hp</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1618578480598-3d1a7f6f7c82?auto=format&fit=crop&w=800&q=80" alt="Mercedes W15">
+      <div class="info">
+        <h3>Mercedes W15</h3>
+        <p>Team: Mercedes</p>
+        <div class="specs">
+          <span>Top Speed: 352 km/h</span>
+          <span>Power: 1070 hp</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1618578480598-3d1a7f6f7c82?auto=format&fit=crop&w=800&q=80" alt="Red Bull RB20">
+      <div class="info">
+        <h3>Red Bull RB20</h3>
+        <p>Team: Red Bull</p>
+        <div class="specs">
+          <span>Top Speed: 360 km/h</span>
+          <span>Power: 1080 hp</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1618578480598-3d1a7f6f7c82?auto=format&fit=crop&w=800&q=80" alt="McLaren MCL38">
+      <div class="info">
+        <h3>McLaren MCL38</h3>
+        <p>Team: McLaren</p>
+        <div class="specs">
+          <span>Top Speed: 348 km/h</span>
+          <span>Power: 1065 hp</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1618578480598-3d1a7f6f7c82?auto=format&fit=crop&w=800&q=80" alt="Williams FW46">
+      <div class="info">
+        <h3>Williams FW46</h3>
+        <p>Team: Williams</p>
+        <div class="specs">
+          <span>Top Speed: 340 km/h</span>
+          <span>Power: 1050 hp</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 F1 Pro Fan Page | Designed by Emtiaz</p>
+  </footer>
+</body>
+</html>
